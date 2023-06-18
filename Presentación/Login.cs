@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace ProyectoIDS
+namespace Presentación
 {
     public partial class Inicio : Form
     {
@@ -92,6 +92,18 @@ namespace ProyectoIDS
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            FormPrincipal mainMenu = new FormPrincipal();
+            mainMenu.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
